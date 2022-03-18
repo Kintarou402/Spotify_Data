@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify楽曲データ</title>
+  </head>
+  <body>
+    <h1>Spotify楽曲データ</h1>
+    <p>Spotifyで楽曲のデータを調べます。</p>
+    <p>作成者は{{ name }}です</p><br>
+    
+    <form action="post" class="input1">
+        {% csrf_token %}
+        <label>入力</label><input type="text">
+        <button type="submit" name="start_button"></button>
+        <button type="submit" name="finish_button">終了する</button>
+    </form>
+    <a href="{% url page %}">{{ page }}</a>
+    
+  </body>
+</html>
